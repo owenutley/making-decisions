@@ -6,7 +6,13 @@
   If it is not, console-log "Coding has it's challenges."
 */
 
-//CODE HERE
+let lovesCode = true
+
+if (lovesCode === true) {
+  console.log(`I love to code`)
+} else {
+  console.log(`Codig has it's challenges`)
+}
 
 // For problems 2-3 use the following lines of code:
 var amysAge = 29
@@ -20,7 +26,7 @@ var brittanisBirthYear = 1986
   Using an if statement and a comparison operator, create code that will check if Amy or Brittani is older, and then console.log '{name} is older'. Hint: Consider what will happen if they are the same age. Handle this situation.
 */
 
-//CODE HERE
+
 
 
 ////////// PROBLEM 3 //////////
@@ -29,7 +35,11 @@ var brittanisBirthYear = 1986
   Using an if statement and a comparison operator, create code that will check if Amy and Brittani were born in the same year. If they were, console.log 'Amy & Brittani were born in the same year'. If they were not, console.log 'Amy & Brittani were not born in the same year'
 */
 
-//CODE HERE
+if (amysBirthYear === brittanisBirthYear){
+  console.log(`Amy and Brittani were born in the same year.`)
+} else {
+  console.log(`Amy and Brittani were not born in the  same year.`)
+}
 
 
 
@@ -49,7 +59,8 @@ var arr = [10,20,30,40,50,60]
   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
 
-//Code Here
+let lastItemRemoved = arr.pop()
+console.log(lastItemRemoved)
 
 ////////// PROBLEM 6 //////////
 
@@ -61,7 +72,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
   Loop through the 'family' array and console.log every item.
 */
 
-//Code Here
+for (let i = 0; i < family.length; i++) {
+  console.log(family[i])
+}
 
 
 
@@ -76,10 +89,15 @@ let evensArr = []
   Use a for-loop to iterate through each number in the 'nums' array, if the number is even, append it to the 'evensArr'.
 */
 
-//Code Here
-
-
-
+for (let i = 0; i < nums.length; i++){ 
+  if (nums[i] % 2 === 0){
+    evensArr.push(nums[i])
+  //   evensArr = nums.splice(i, 1)
+  console.log(evensArr)
+}
+}
+// var evensArr = nums.splice(1, 1)
+// console.log(evensArr[i])
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -90,7 +108,7 @@ var score = 74
   Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console-log an 'A', between 80 and 89, console-log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console-log an 'F'.
 */
 
-//Code Here
+
 
 
 ////////// Intermediate Problems //////////
@@ -152,7 +170,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the 'letters' array. Console-log every item in the array.
 */
 
-//Code Here
+for (let i = 4; i >= 0; i--){
+  console.log(letters[i])
+}
 
 
 ////////// Advanced Problems //////////
@@ -174,7 +194,27 @@ If F: "The student is failing."
 If the letter grade is not one of the above letters, console.log 'Not an eligible grade.'
 */
 
-//Code Here
+switch(letterGrade){
+  case 'A':
+    console.log("The student is doing excellently")
+    break;
+  case 'B':
+    console.log("The student is doing well.")
+    break;
+  case 'C':
+    console.log("The student is doing alright.")
+    break;
+  case 'D':
+    console.log("The student is not doing very well.")
+    break;
+  case 'F':
+    console.log("The student is failing.")
+    break;
+  default:
+
+  
+}
+
 
 
 
@@ -202,4 +242,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
   ...
 */
 
-//Code Here
+for (let i = 0; i < 101; i++){
+  if(i % 3 === 0 && i % 5 === 0){
+    console.log("Devmountain")
+  } else if(i % 3 === 0 ){
+    console.log("Dev")
+  } else if(i % 5 === 0 ) {
+    console.log("mountain")
+  } else{
+    console.log(i)
+  }
+
+}
