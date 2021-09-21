@@ -26,7 +26,13 @@ var brittanisBirthYear = 1986
   Using an if statement and a comparison operator, create code that will check if Amy or Brittani is older, and then console.log '{name} is older'. Hint: Consider what will happen if they are the same age. Handle this situation.
 */
 
-
+if (amysAge > brittanisAge){
+  console.log("Amy is older than Brittani")
+} else if (amysAge < brittanisAge){
+  console.log("Brittani is older than Amy")
+} else {
+  console.log("They're the same age")
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -51,7 +57,8 @@ var arr = [10,20,30,40,50,60]
   Create a variable named 'firstItem' and set it equal to the first value of the 'arr' array.
 */
 
-//Code Here
+var firstItem = arr[0]
+console.log(firstItem)
 
 
 ////////// PROBLEM 5 //////////
@@ -93,7 +100,7 @@ for (let i = 0; i < nums.length; i++){
   if (nums[i] % 2 === 0){
     evensArr.push(nums[i])
   //   evensArr = nums.splice(i, 1)
-  console.log(evensArr)
+  // console.log(evensArr)
 }
 }
 // var evensArr = nums.splice(1, 1)
@@ -108,7 +115,17 @@ var score = 74
   Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console-log an 'A', between 80 and 89, console-log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console-log an 'F'.
 */
 
-
+if (score >= 90) {
+  console.log("a")
+} else if (score >= 80) {
+  console.log("b")
+} else if (score >= 70) {
+  console.log("c")
+} else if (score >= 60) {
+  console.log("d")
+} else {
+ console.log("f")
+}
 
 
 ////////// Intermediate Problems //////////
@@ -120,12 +137,18 @@ var score = 74
 
 */
 
-//CODE HERE
+
 
 
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
-//CODE HERE
+var changeMyMind = false
+
+if (changeMyMind === true) {
+  console.log(changeMyMind = true)
+} else if ( changeMyMind === false) {
+  console.log(changeMyMind = true)
+}
 
 
 
@@ -140,14 +163,21 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
   Create a variable named 'someNum' and set it equal to the fifth value of the 'myFavoriteNumbers' array.
 */
 
-//Code Here
+var someNum = myFavoriteNumbers[4]
+console.log(someNum)
 
 
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
-//Code Here
+if (myFavoriteNumbers.length < 7) {
+  console.log("there aren't enough elements in this array")
+} else if (myFavoriteNumbers.length > 7) {
+myFavoriteNumbers.splice(4, 1)
+myFavoriteNumbers.splice(6, 0, someNum)
+}
+console.log(myFavoriteNumbers)
 
 
 ////////// PROBLEM 11 //////////
@@ -158,7 +188,11 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
-//Code Here
+for (let i = 0; i < listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log(`${listOfNumbers[i]} is divisible by 3`)
+  }
+}
 
 
 ////////// PROBLEM 12 //////////
